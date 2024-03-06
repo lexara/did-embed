@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-ID Embed</title>
+    <!-- Add D-ID stylesheet -->
+    <link rel="stylesheet" href="https://agent.d-id.com/1.0.0-beta.59/style.css">
+</head>
+<body>
+    <!-- Add D-ID script -->
+    <script type="module">
+        // Load D-ID script dynamically
+        function loadDIDScript() {
+            const script = document.createElement('script');
+            script.type = 'module';
+            script.src = 'https://agent.d-id.com/1.0.0-beta.59/index.js';
+            script.setAttribute('data-name', 'did-agent');
+            script.setAttribute('data-mode', 'fabio');
+            script.setAttribute('data-client-key', 'Z29vZ2xlLW9hdXRoMnwxMDQyNjIwNDI3ODg3Njc1NDU5NTU6OG4wSU5QSmNuZ2F3ZkdHMFQ1TGNS');
+            script.setAttribute('data-agent-id', 'agt_S2uGb4Sn');
+            document.body.appendChild(script);
+        }
+
+        // Check if the page has finished loading, then load D-ID script
+        if (document.readyState === 'complete') {
+            loadDIDScript();
+        } else {
+            window.addEventListener('load', loadDIDScript);
+        }
+    </script>
+</body>
+</html>
